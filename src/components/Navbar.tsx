@@ -1,17 +1,29 @@
-import React from "react";
-import Logo from "../images/logo.svg";
+import logo from "../images/logo.svg";
+import { Ulist } from "./Ulist";
+import { NAVBAR_LIST_ITEM } from "../utils/constants";
 
 export function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-center">
         <div className="nav-header">
-          <img src={Logo} className="nav-logo" alt="backroads" />
+          <img src={logo} className="nav-logo" alt="backroads" />
           <button type="button" className="nav-toggle" id="nav-toggle">
             <i className="fas fa-bars"></i>
           </button>
         </div>
         {/* <!-- left this comment on purpose --> */}
+        //così non va bene perchè non sto iterando hyperLinkRef e il children
+        //domani continuare
+        <Ulist
+          numberOfListItem={NAVBAR_LIST_ITEM.length}
+          UlClassName="nav-links"
+          UlId="nav-links"
+          hyperLinkClassName="nav-link"
+          hyperLinkRef="#home"
+        >
+          Home
+        </Ulist>
         <ul className="nav-links" id="nav-links">
           <li>
             <a href="#home" className="nav-link">
@@ -40,7 +52,6 @@ export function Navbar() {
             </a>
           </li>
         </ul>
-
         <ul className="nav-icons">
           <li>
             <a

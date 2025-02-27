@@ -1,21 +1,42 @@
 import React from "react";
-import { ListItem } from "./ListItem";
 
-type Ulist = {
-  className: string;
-  children?: React.ReactNode;
-  aContent: string;
-  id: string;
+type UistProps = {
+  hyperLinkRef: string;
+  hyperLinkClassName: string;
+  UlClassName: string;
+  UlId: string;
+  iconClassNames?: string;
+  numberOfListItem: number;
+  children: React.ReactNode;
 };
 
-export const Ulist = ({
+export const Ulist: React.FC<UistProps> = ({
+  numberOfListItem,
+  iconClassNames,
+  UlClassName,
+  UlId,
   children,
-  aContent,
-  ...props
-}: React.PropsWithChildren<Ulist>) => {
+  hyperLinkRef,
+  hyperLinkClassName,
+}) => {
+  const ulParameters = { className: UlClassName, id: UlId };
+  const hyperLinkParameters = {
+    className: hyperLinkClassName,
+    href: hyperLinkRef,
+  };
+
   return (
-    <ul {...props}>
-      <ListItem children={children} />
+    //spread operator to "expand" the object in single attributes of ul tag
+    <ul {...ulParameters}>
+      {[...Array(numberOfListItem)].map(() => {
+        return (
+          <li>
+            <a {...hyperLinkParameters}>{children}</a>
+
+            {iconClassNames && <i className={iconClassNames}></i>}
+          </li>
+        );
+      })}
     </ul>
   );
 };
