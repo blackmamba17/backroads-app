@@ -13,45 +13,12 @@ export function Navbar() {
           </button>
         </div>
         {/* <!-- left this comment on purpose --> */}
-        //così non va bene perchè non sto iterando hyperLinkRef e il children
-        //domani continuare
         <Ulist
-          numberOfListItem={NAVBAR_LIST_ITEM.length}
           UlClassName="nav-links"
           UlId="nav-links"
           hyperLinkClassName="nav-link"
-          hyperLinkRef="#home"
-        >
-          Home
-        </Ulist>
-        <ul className="nav-links" id="nav-links">
-          <li>
-            <a href="#home" className="nav-link">
-              {" "}
-              home{" "}
-            </a>
-          </li>
-
-          <li>
-            <a href="#about" className="nav-link">
-              about
-            </a>
-          </li>
-
-          <li>
-            <a href="#services" className="nav-link">
-              {" "}
-              services{" "}
-            </a>
-          </li>
-
-          <li>
-            <a href="#tours" className="nav-link">
-              {" "}
-              tours
-            </a>
-          </li>
-        </ul>
+          arrayOfHyperLinkItems={NAVBAR_LIST_ITEM}
+        />
         <ul className="nav-icons">
           <li>
             <a
