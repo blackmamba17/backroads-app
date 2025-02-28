@@ -1,6 +1,6 @@
 import logo from "../images/logo.svg";
 import { Ulist } from "./Ulist";
-import { NAVBAR_LIST_ITEM } from "../utils/constants";
+import { NAVBAR_LIST_ICONS, NAVBAR_LIST_ITEMS } from "../utils/constants";
 
 export function Navbar() {
   return (
@@ -17,7 +17,12 @@ export function Navbar() {
           UlClassName="nav-links"
           UlId="nav-links"
           hyperLinkClassName="nav-link"
-          arrayOfHyperLinkItems={NAVBAR_LIST_ITEM}
+          arrayOfHyperLinkItems={NAVBAR_LIST_ITEMS}
+        />
+        <Ulist
+          UlClassName="nav-icons"
+          hyperLinkClassName="nav-icon"
+          iconClassNames={NAVBAR_LIST_ICONS}
         />
         <ul className="nav-icons">
           <li>
