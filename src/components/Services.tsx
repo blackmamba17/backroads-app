@@ -1,13 +1,10 @@
 import React from "react";
+import { SectionTitle } from "./SectionTitle";
 
 export function Services() {
   return (
     <section className="section services" id="services">
-      <div className="section-title">
-        <h2>
-          our <span>services</span>
-        </h2>
-      </div>
+      <SectionTitle titleText="our services" />
       <div className="section-center services-center">
         <article className="service">
           <span className="service-icon">
