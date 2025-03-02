@@ -19,11 +19,14 @@ export function Navbar() {
           hyperLinkClassName="nav-link"
           arrayOfHyperLinkItems={NAVBAR_LIST_ITEMS}
         />
+
+        {/* controllare dopo perchè spunta object */}
         <Ulist
           UlClassName="nav-icons"
           hyperLinkClassName="nav-icon"
           iconClassNames={NAVBAR_LIST_ICONS}
         />
+
         <ul className="nav-icons">
           <li>
             <a

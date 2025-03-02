@@ -29,7 +29,7 @@ export const Ulist: React.FC<UlistProps> = ({
       {typeof props.arrayOfHyperLinkItems != "undefined" &&
         props.arrayOfHyperLinkItems?.map((hyperLinkItem, hyperLinkIndex) => {
           return (
-            <li id={`${hyperLinkItem}${hyperLinkIndex}`}>
+            <li key={`${hyperLinkItem}${hyperLinkIndex}`}>
               <a
                 href={`#${hyperLinkItem.toLowerCase()}`}
                 className={hyperLinkClassName}
@@ -39,7 +39,7 @@ export const Ulist: React.FC<UlistProps> = ({
             </li>
           );
         })}
-      {typeof props.iconClassNames}
+      {/* {typeof props.iconClassNames} */}
     </ul>
   );
 };
