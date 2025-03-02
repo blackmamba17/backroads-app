@@ -1,4 +1,6 @@
 import React from "react";
+import { Ulist } from "./Ulist";
+import { NAVBAR_LIST_ICONS_AND_LINKS } from "../utils/constants";
 
 export function Footer() {
   return (
@@ -25,35 +27,13 @@ export function Footer() {
           </a>
         </li>
       </ul>
-      <ul className="footer-icons">
-        <li>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            className="footer-icon"
-          >
-            <i className="fab fa-facebook"></i>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            className="footer-icon"
-          >
-            <i className="fab fa-twitter"></i>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            className="footer-icon"
-          >
-            <i className="fab fa-squarespace"></i>
-          </a>
-        </li>
-      </ul>
+
+      <Ulist
+        UlClassName="footer-icons"
+        hyperLinkClassName="nav-icon"
+        iconClassNames={NAVBAR_LIST_ICONS_AND_LINKS}
+      />
+
       <p className="copyright">
         copyright &copy; Backroads travel tours company
         <span id="date"></span> all rights reserved
