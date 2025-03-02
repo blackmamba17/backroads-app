@@ -1,6 +1,9 @@
 import logo from "../images/logo.svg";
 import { Ulist } from "./Ulist";
-import { NAVBAR_LIST_ICONS, NAVBAR_LIST_ITEMS } from "../utils/constants";
+import {
+  NAVBAR_LIST_ICONS_AND_LINKS,
+  NAVBAR_LIST_ITEMS,
+} from "../utils/constants";
 
 export function Navbar() {
   return (
@@ -19,15 +22,13 @@ export function Navbar() {
           hyperLinkClassName="nav-link"
           arrayOfHyperLinkItems={NAVBAR_LIST_ITEMS}
         />
-
-        {/* controllare dopo perchè spunta object */}
         <Ulist
           UlClassName="nav-icons"
           hyperLinkClassName="nav-icon"
-          iconClassNames={NAVBAR_LIST_ICONS}
+          iconClassNames={NAVBAR_LIST_ICONS_AND_LINKS}
         />
 
-        <ul className="nav-icons">
+        {/* <ul className="nav-icons">
           <li>
             <a
               href="https://www.twitter.com"
@@ -55,7 +56,7 @@ export function Navbar() {
               <i className="fab fa-squarespace"></i>
             </a>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </nav>
   );

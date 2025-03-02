@@ -1,12 +1,18 @@
 import React from "react";
 
+type iconClassType = {
+  icon: string;
+  link: string;
+};
+
+//to do the "or this or that"
 type ConditionalUlistProps =
   | {
       arrayOfHyperLinkItems: string[];
       iconClassNames?: undefined;
     }
   | {
-      iconClassNames: string[];
+      iconClassNames: iconClassType[];
       arrayOfHyperLinkItems?: undefined;
     };
 
@@ -39,7 +45,20 @@ export const Ulist: React.FC<UlistProps> = ({
             </li>
           );
         })}
-      {/* {typeof props.iconClassNames} */}
+      {typeof props.iconClassNames != "undefined" &&
+        props.iconClassNames?.map((iconClassName, iconClassIndex) => {
+          return (
+            <li key={`${iconClassName.icon}${iconClassIndex}`}>
+              <a
+                href={iconClassName.link}
+                target="_blank"
+                className={hyperLinkClassName}
+              >
+                <i className={iconClassName.icon}></i>
+              </a>
+            </li>
+          );
+        })}
     </ul>
   );
 };
