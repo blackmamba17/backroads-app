@@ -6,7 +6,9 @@ export const SectionTitle: FC<{
   const arrayOfTitleWords = titleText.split(" ");
   const modifiedTitleTextWithSpans = arrayOfTitleWords.reduce(
     (accumulator, currentTextWord, index) => {
-      if (index % 2 == 0) {
+      console.log(index);
+
+      if (index % 2 != 0) {
         return accumulator + "<span>" + currentTextWord + "</span>";
       } else {
         return accumulator + currentTextWord;
@@ -14,12 +16,10 @@ export const SectionTitle: FC<{
     },
     ""
   );
+
   return (
     <div className="section-title">
-      <h2>
-        {/* about <span>us</span> */}
-        {modifiedTitleTextWithSpans}
-      </h2>
+      <h2>{modifiedTitleTextWithSpans}</h2>
     </div>
   );
 };
