@@ -9,7 +9,9 @@ export const SectionTitle: FC<{
       <h2>
         {arrayOfTitleWords.map((singleTitleWord, index) => {
           return index % 2 != 0 ? (
-            <span>{" " + singleTitleWord}</span>
+            <span key={singleTitleWord + "" + index}>
+              {" " + singleTitleWord}
+            </span>
           ) : (
             singleTitleWord
           );
