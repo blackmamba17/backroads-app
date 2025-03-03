@@ -18,3 +18,21 @@ export const NAVBAR_LIST_ICONS_AND_LINKS = [
     link: "https://www.squarespace.com",
   },
 ];
+
+export const ARTICLES_LIST = [
+  {
+    icon: "fas fa-wallet fa-fw",
+    title: "saving money",
+    paragraphTextContent: "Lorem ipsum dolor sit amet consect",
+  },
+  {
+    icon: "fas fa-tree fa-fw",
+    title: "endless hiking",
+    paragraphTextContent: "Lorem ipsum dolor sit amet consect",
+  },
+  {
+    icon: "fas fa-socks fa-fw",
+    title: "amazing comfort",
+    paragraphTextContent: "Lorem ipsum dolor sit amet consect",
+  },
+];
