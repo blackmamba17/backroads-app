@@ -5,7 +5,7 @@ import { SectionTitle } from "./SectionTitle";
 export function About() {
   return (
     <section className="section" id="about">
-      <SectionTitle titleText="about us" />
+      <SectionTitle titleText="about us pinko pallino" />
       <div className="section-center about-center">
         <div className="about-img">
           <img src={aboutImg} className="about-photo" alt="awesome beach" />
