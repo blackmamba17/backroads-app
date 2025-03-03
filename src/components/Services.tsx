@@ -1,49 +1,44 @@
 import React from "react";
 import { SectionTitle } from "./SectionTitle";
+import { Articles } from "./Articles";
 
 export function Services() {
   return (
     <section className="section services" id="services">
       <SectionTitle titleText="our services" />
       <div className="section-center services-center">
-        <article className="service">
-          <span className="service-icon">
-            <i className="fas fa-wallet fa-fw"></i>
-          </span>
-          <div className="service-info">
-            <h4 className="service-title">saving money</h4>
-            <p className="service-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores, officia.
-            </p>
-          </div>
-        </article>
-
-        <article className="service">
-          <span className="service-icon">
-            <i className="fas fa-tree fa-fw"></i>
-          </span>
-          <div className="service-info">
-            <h4 className="service-title">endless hiking</h4>
-            <p className="service-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores, officia.
-            </p>
-          </div>
-        </article>
-
-        <article className="service">
-          <span className="service-icon">
-            <i className="fas fa-socks fa-fw"></i>
-          </span>
-          <div className="service-info">
-            <h4 className="service-title">amazing comfort</h4>
-            <p className="service-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores, officia.
-            </p>
-          </div>
-        </article>
+        <Articles
+          articleClassName="service"
+          spanClassName="service-icon"
+          iconClassName="fas fa-wallet fa-fw"
+          divClassName="service-info"
+          h4ClassName="service-title"
+          h4TextContent="saving money"
+          pClassName="service-text"
+          pTextContent="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officia."
+        />
+        <Articles
+          articleClassName="service"
+          spanClassName="service-icon"
+          iconClassName="fas fa-tree fa-fw"
+          divClassName="service-info"
+          h4ClassName="service-title"
+          h4TextContent="endless hiking"
+          pClassName="service-text"
+          pTextContent="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores, officia."
+        />
+        <Articles
+          articleClassName="service"
+          spanClassName="service-icon"
+          iconClassName="fas fa-socks fa-fw"
+          divClassName="service-info"
+          h4ClassName="service-title"
+          h4TextContent="amazing comfort"
+          pClassName="service-text"
+          pTextContent="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores, officia."
+        />
       </div>
     </section>
   );
