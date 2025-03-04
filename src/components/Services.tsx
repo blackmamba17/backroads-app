@@ -1,4 +1,3 @@
-import React from "react";
 import { SectionTitle } from "./SectionTitle";
 import { Articles } from "./Articles";
 import { ARTICLES_LIST } from "../utils/constants";
